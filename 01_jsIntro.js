@@ -12,9 +12,13 @@
 
 // Define global variables here
 
+const myString = 'my string';
+var numbers = 7;
+
 function setNumbers(num) {
-  // Your code here
+  numbers = num;
 }
+
 var assert = require('assert');
 
 describe('jsIntro', () => {
