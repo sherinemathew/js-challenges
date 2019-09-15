@@ -18,6 +18,7 @@
 ## List of challenge branches
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 01_jsIntro
 =======
 * 01_jsIntro
@@ -28,3 +29,9 @@
 * 02_largestNumber
 * 03_openDoor
 >>>>>>> 112a5e824dc84d132403e06f1d5de8ecdc194a84
+=======
+* 01_jsIntro
+* 02_largestNumber
+* 03_openDoor
+* 04_objects
+>>>>>>> 983e022fe8d8d4e91a410cbbc1b11086b8cacd4e
