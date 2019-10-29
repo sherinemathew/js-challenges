@@ -14,16 +14,57 @@
 // EXTRA FUN!!! Make up another encryption and challenge your friends to write the decipher method
 
 function decipher(code) {
-	// your code goes here
+	return code.split(' ').map(word => {
+		let firstLetter = String.fromCharCode(word.match(/\d+/));
+		word = word.match(/[a-z]/gi) || [];
+		[word[0], word[word.length - 1]] = [word[word.length - 1], word[0]];
+		return firstLetter + word.join('');
+	}).join(' ');
 }
 
-let assert = require("assert")
-describe("decipher", () => {
-	it("should decipher '72olle 103doo 100ya' as 'Hello good day'", () => {
-		assert.equal(decipher("72olle 103doo 100ya"), "Hello good day")
-	})
-	it("should decipher '82yade 115te 103o' as 'Ready set go'", () => {
-		assert.equal(decipher("82yade 115te 103o"), "Ready set go")
-	})
-})
+console.log(decipher('72olle 103doo 100ya'));
+console.log(decipher('82yade 115te 103o'));
+
+// let assert = require("assert")
+// describe("decipher", () => {
+// 	it("should decipher '72olle 103doo 100ya' as 'Hello good day'", () => {
+// 		assert.equal(decipher("72olle 103doo 100ya"), "Hello good day")
+// 	})
+// 	it("should decipher '82yade 115te 103o' as 'Ready set go'", () => {
+// 		assert.equal(decipher("82yade 115te 103o"), "Ready set go")
+// 	})
+// })
 // write some more tests. Share then with your classmates
+
+
+// Alternate solution
+// function decipher(code) {
+//     let newCode="";
+//     var n
+// 	var words = code.split(" ");
+//     words.forEach(word => {
+//         newWord="";
+//         let number;
+//         if (word.charAt(0)=='1'){
+//             n=3
+//         }   
+//         else{
+//             n=2
+//         }
+        
+//         number = parseInt(word.substring(0,n));
+//         newWord = String.fromCharCode(number)
+//         if (word.length>(n+1))
+//             newWord+=word.charAt(word.length - 1)
+//         if (word.length>(n+2))
+//             newWord+=word.substring((n+1),word.length - 1)
+//         newWord+=word.charAt(n)
+       
+//         if (newCode===""){
+//             newCode=newWord;
+//         }else{
+//             newCode+=" "+newWord;
+//         }
+//     });
+//     console.log(newCode)
+// }
